@@ -1,4 +1,4 @@
-# Lab6 Raft算法实现
+# Lab6 实现Raft算法
 
 ## 前言
 
