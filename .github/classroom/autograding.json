@@ -1,0 +1,174 @@
+{
+  "tests": [
+    {
+      "name": "lab1P0",
+      "setup": "",
+      "run": "cd tinykv && make lab1P0",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "lab1P1a",
+      "setup": "",
+      "run": "cd tinykv && make lab1P1a",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "lab1P2a",
+      "setup": "",
+      "run": "cd tinykv && make lab1P2a",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "lab1P3a",
+      "setup": "",
+      "run": "cd tinykv && make lab1P3a",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "lab1P4a",
+      "setup": "",
+      "run": "cd tinykv && make lab1P4a",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "lab1P1b",
+      "setup": "",
+      "run": "cd tinykv && make lab1P1b",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "lab1P2b",
+      "setup": "",
+      "run": "cd tinykv && make lab1P2b",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "lab1P3b",
+      "setup": "",
+      "run": "cd tinykv && make lab1P3b",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "lab1P4b",
+      "setup": "",
+      "run": "cd tinykv && make lab1P4b",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "lab2P1",
+      "setup": "",
+      "run": "cd tinykv && make lab2P1",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "lab2P2",
+      "setup": "",
+      "run": "cd tinykv && make lab2P2",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "lab2P3",
+      "setup": "",
+      "run": "cd tinykv && make lab2P3",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "lab2P4",
+      "setup": "",
+      "run": "cd tinykv && make lab2P4",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "lab3",
+      "setup": "",
+      "run": "cd tinysql && make lab3",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "lab4a",
+      "setup": "",
+      "run": "cd tinysql && make lab4a",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "lab4b",
+      "setup": "",
+      "run": "cd tinysql && make lab4b",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "lab4c",
+      "setup": "",
+      "run": "cd tinysql && make lab4c",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    }
+  ]
+}
