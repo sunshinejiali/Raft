@@ -14,7 +14,7 @@ cd tinykv
 make kv
 ```
 
-这次`Lab6`的实验只关注`tinykv`中的`Raft`算法的实现，所有代码均在`Lab6_Raft/tinykv/raft/raft.go`文件中。
+这次`Lab6`的实验只关注`tinykv`中的`Raft`算法的实现，所有需要填充的代码均在`Lab6_Raft/tinykv/raft/raft.go`文件中。
 
 `Lab6_Raft` 实验分为两部分，包括Leader选举和日志复制，请根据注释提示完成代码填充工作。每个小实验后面都有一个验证测试，你可以根据测试来验证自己的代码是否正确。
 
@@ -30,7 +30,7 @@ make kv
 ![img.png](docs/image/leader_election.png)
 
 我们需要从 `tick` 出发，向前推进当前的时间。如果时间满足Leader选举的要求，则节点转变状态发起选举。
-若某个节点收到了集群中多数节点的赞成票，则可以转为 `Leader`，选举成功。
+若某个节点收到了集群中多数节点的赞成票，则可以转为 `Leader`，选举成功。选举成功的Leader需要发送心跳来维护自己的权威。
 
 ### 测试
 当你完成这部分代码之后，别忘记运行 `make lab6P1` 来测试你的结果是否正确。

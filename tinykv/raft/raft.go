@@ -327,14 +327,13 @@ func (r *Raft) sendHeartbeat(to uint64) {
 	// or it might not have all the committed entries.
 	// The leader MUST NOT forward the follower's commit to
 	// an unmatched index.
-	commit := min(r.getProgress(to).Match, r.RaftLog.committed)
-	m := pb.Message{
-		To:      to,
-		MsgType: pb.MessageType_MsgHeartbeat,
-		Commit:  commit,
-	}
 
-	r.send(m)
+	// Lab6: Leader_Election_Step7:::send heartbeat.
+	// You need to fill in pb.MessageType_MsgHeartbeat and send it. And don't forget to carry the commit index.
+	panic("Lab6: Leader_Election_Step7:::Your code here.")
+
+
+
 }
 
 func (r *Raft) forEachProgress(f func(id uint64, pr *Progress)) {
