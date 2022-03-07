@@ -307,9 +307,9 @@ func (r *Raft) sendAppend(to uint64) bool {
 			r.id, r.RaftLog.firstIndex(), r.RaftLog.committed, sindex, sterm, to, pr))
 		log.Debug(fmt.Sprintf("%d paused sending replication messages to %d [%v]", r.id, to, pr))
 	} else {
-		// Lab6: Replication_Step2:::Send entries.
+		// Raft: Replication_Step2:::Send entries.
 		// You need to set the info of MsgAppend_message, which include logTerm, index, msgType, entries and commit.
-		panic("Lab6: Replication_Step2:::Your code here.")
+		panic("Raft: Replication_Step2:::Your code here.")
 
 
 
@@ -328,9 +328,9 @@ func (r *Raft) sendHeartbeat(to uint64) {
 	// The leader MUST NOT forward the follower's commit to
 	// an unmatched index.
 
-	// Lab6: Leader_Election_Step7:::send heartbeat.
+	// Raft: Leader_Election_Step7:::send heartbeat.
 	// You need to fill in pb.MessageType_MsgHeartbeat and send it. And don't forget to carry the commit index.
-	panic("Lab6: Leader_Election_Step7:::Your code here.")
+	panic("Raft: Leader_Election_Step7:::Your code here.")
 
 
 
@@ -405,9 +405,9 @@ func (r *Raft) reset(term uint64) {
 
 func (r *Raft) appendEntry(es ...pb.Entry) {
 	li := r.RaftLog.LastIndex()
-	// Lab6: Replication_Step1:::Append entries.
+	// Raft: Replication_Step1:::Append entries.
 	// You need to set the term and the index of the entries.
-	panic("Lab6: Replication_Step1:::Your code here.")
+	panic("Raft: Replication_Step1:::Your code here.")
 
 
 
@@ -430,15 +430,15 @@ func (r *Raft) tick() {
 
 // tickElection is run by followers and candidates after r.electionTimeout.
 func (r *Raft) tickElection() {
-	// Lab6: Leader_Election_Step1:::Advance the electionElapsed.
+	// Raft: Leader_Election_Step1:::Advance the electionElapsed.
 	// You need to advance the time.
-	panic("Lab6: Leader_Election_Step1:::Your code here.")
+	panic("Raft: Leader_Election_Step1:::Your code here.")
 
 
 	if r.promotable() && r.pastElectionTimeout() {
-		// Lab6: Leader_Election_Step2:::Launching a round of election.
+		// Raft: Leader_Election_Step2:::Launching a round of election.
 		// You need to update the electionElapsed and set the msgHup message.
-		panic("Lab6: Leader_Election_Step2:::Your code here.")
+		panic("Raft: Leader_Election_Step2:::Your code here.")
 
 
 
@@ -479,9 +479,9 @@ func (r *Raft) becomeFollower(term uint64, lead uint64) {
 
 // becomeCandidate transform this peer's state to candidate
 func (r *Raft) becomeCandidate() {
-	// Lab6: Leader_Election_Step3:::becomeCandidate.
+	// Raft: Leader_Election_Step3:::becomeCandidate.
 	// You need to set the term, vote and state.
-	panic("Lab6: Leader_Election_Step3:::Your code here.")
+	panic("Raft: Leader_Election_Step3:::Your code here.")
 
 
 
@@ -513,10 +513,10 @@ func (r *Raft) campaign() {
 	term := r.Term
 
 	if r.quorum() == r.poll(r.id, pb.MessageType_MsgRequestVoteResponse, true) {
-		// Lab6: Leader_Election_Step4:::becomeLeader.
+		// Raft: Leader_Election_Step4:::becomeLeader.
 		// We won the election after voting for ourselves (which must mean that
 		// this is a single-node cluster). Advance to the next state.
-		panic("Lab6: Leader_Election_Step4:::Your code here.")
+		panic("Raft: Leader_Election_Step4:::Your code here.")
 
 
 		return
@@ -591,10 +591,10 @@ func (r *Raft) Step(m pb.Message) error {
 	case pb.MessageType_MsgRequestVote:
 		canVote := false
 
-		// Lab6: Leader_Election_Step5:::Voting or not.
+		// Raft: Leader_Election_Step5:::Voting or not.
 		// We can vote if this is a repeat of a vote we've already cast...
 		// ...we haven't voted and we don't think there's a leader yet in this term...
-		panic("Lab6: Leader_Election_Step5:::Your code here.")
+		panic("Raft: Leader_Election_Step5:::Your code here.")
 
 
 		// ...and we believe the candidate is up to date.
@@ -690,10 +690,10 @@ func (r *Raft) stepLeader(m pb.Message) error {
 			}
 		} else {
 			if pr.maybeUpdate(m.Index) {
-				// Lab6: Replication_Step3:::Broadcast commit index.
+				// Raft: Replication_Step3:::Broadcast commit index.
 				// You need to determine if the current log entry needs to be committed. And broadcast the result if the
 				// entry need to be committed.
-				panic("Lab6: Replication_Step3:::Your code here.")
+				panic("Raft: Replication_Step3:::Your code here.")
 
 
 				// Transfer leadership is in progress.
@@ -756,10 +756,10 @@ func (r *Raft) stepCandidate(m pb.Message) error {
 	case pb.MessageType_MsgRequestVoteResponse:
 		gr := r.poll(m.From, m.MsgType, !m.Reject)
 		log.Info(fmt.Sprintf("%d [quorum:%d] has received %d %s votes and %d vote rejections", r.id, r.quorum(), gr, m.MsgType, len(r.votes)-gr))
-		// Lab6: Leader_Election_Step6:::Change state.
+		// Raft: Leader_Election_Step6:::Change state.
 		// If the candidate receives majority of the active votes, it can become the leader and broadcast the result.
 		// But if the candidate receives majority of the negative votes, it can become the follower.
-		panic("Lab6: Leader_Election_Step6:::Your code here.")
+		panic("Raft: Leader_Election_Step6:::Your code here.")
 
 
 

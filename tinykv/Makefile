@@ -155,7 +155,7 @@ lab2P4:
 
 ###
 # The lab6 related tests.
-lab6P1:
+raftP1:
 	$(GOTEST) ./raft -run ^TestCandidateUpdateTermFromMessage2A$ || true
 	$(GOTEST) ./raft -run ^TestFollowerStartElection2A$ || true
 	$(GOTEST) ./raft -run ^TestCandidateStartNewElection2A$ || true
@@ -167,7 +167,7 @@ lab6P1:
 	$(GOTEST) ./raft -run ^TestVoteRequest2B$ || true
 	$(GOTEST) ./raft -run ^TestVoter2A$ || true
 
-lab6P2:
+raftP2:
 	$(GOTEST) ./raft -run ^TestLeaderStartReplication2B$ || true
 	$(GOTEST) ./raft -run ^TestLeaderCommitEntry2B$ || true
 	$(GOTEST) ./raft -run ^TestLeaderAcknowledgeCommit2B$ || true
